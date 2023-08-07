@@ -1,8 +1,9 @@
 /// @description 在此处插入描述 
 // 你可以在此编辑器中写入代码 
-show_debug_message(can_i_move)
+//show_debug_message(can_i_move)
 if(frequency == frame ){
 		frame = 1;
+		can_move();
 }else{
 	frame++
 }
@@ -73,7 +74,7 @@ if(keyboard_check_pressed(vk_right)||keyboard_check_pressed(ord("D"))){
 	//切换动画
 	sprite_index = spr_player_idle;
 	//动画第一帧
-	//image_index = 0;
+	//image_index = 0; 
 	//蓄力清零
 	states = 0;
 	//移动位置
