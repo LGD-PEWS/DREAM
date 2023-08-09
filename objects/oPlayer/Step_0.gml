@@ -1,18 +1,8 @@
 /// @description 在此处插入描述 
 // 你可以在此编辑器中写入代码 
-//show_debug_message(can_i_move)
-if(frequency == frame ){
-		frame = 1;
-		can_move();
-}else{
-	frame++
-}
 
-//if(frequency == cant_move_frame ){
-//		can_move();
-//}else{
-//	cant_move_frame++
-//}
+// Inherit the parent event
+event_inherited();
 
 if(frequency/(img_num/2) == img_frame){
 	img_status ++;
@@ -25,79 +15,22 @@ if(frequency/(img_num/2) == img_frame){
 	img_frame++
 }
 
-if((frequency > (frame - left_deviation)) && (frequency < (frame + right_deviation)) && can_i_move ){
-//if(frequency == frame){
-	//on_point();
-	if(keyboard_check_pressed(vk_down)||keyboard_check_pressed(ord("S"))){
-	//蓄力
-	states ++;
-	//切换动画
-	switch (states) {
-	    case 1:
-	        sprite_index = spr_player_down;
-	        break;
-		case 2:
-	        sprite_index = spr_player_down;
-	        break;
-		case 3:
-	        sprite_index = spr_player_down;
-	        break;
-		case 4:
-	        sprite_index = spr_player_down;
-	        break;
-		case 5:
-			sprite_index = spr_player_down;
-	        //sprite_index = spr_player_idle;
-			//蓄力清零
-			states = 0;
-	        break;
-	    default:
-			sprite_index = spr_player_down;
-	        break;
+if((music_status == 1 || music_status == 3 || music_status == 0) && can_i_move){
+//在误差内
+	move();
+}
+
+//进入惩罚区
+if(music_status == 2){
+	show_debug_message(can_i_move)
+	if(move_wait_round > 0 && first_time_in_publish){
+		move_wait_round --;
+	}else if(move_wait_round == 0){
+		can_move();
 	}
-	//动画第一帧
-	//image_index = 0;
+	//如果按下了按键，就处罚
+	punish();
+	if(first_time_in_publish){
+		first_time_in_publish = false;
+	}
 }
-
-if(keyboard_check_pressed(vk_left)||keyboard_check_pressed(ord("A"))){
-	//切换动画
-	sprite_index = spr_player_idle;
-	//动画第一帧
-	//image_index = 0;
-	//蓄力清零
-	states = 0;
-	//移动位置
-	x -= 32;
-}
-
-if(keyboard_check_pressed(vk_right)||keyboard_check_pressed(ord("D"))){
-	//切换动画
-	sprite_index = spr_player_idle;
-	//动画第一帧
-	//image_index = 0; 
-	//蓄力清零
-	states = 0;
-	//移动位置
-	x += 32;
-}
-
-
-}
-
-
-if(
-	keyboard_check_pressed(vk_up)||
-	keyboard_check_pressed(vk_down)||
-	keyboard_check_pressed(vk_left)||
-	keyboard_check_pressed(vk_right)||
-	keyboard_check_pressed(ord("W"))||
-	keyboard_check_pressed(ord("S"))||
-	keyboard_check_pressed(ord("A"))||
-	keyboard_check_pressed(ord("D"))
-){
-	cant_move();
-}
-
-
-
-

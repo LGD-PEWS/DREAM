@@ -19,8 +19,8 @@ img_frame = 1;
 //可以进行移动
 can_i_move = true;
 
-//错误按下后，不可以移动的时间惩罚
-cant_move_frame = 1;
+//x回合后才能动
+move_wait_round = 0;
 
 
 

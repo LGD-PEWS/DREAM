@@ -42,7 +42,7 @@
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},},
     {"id":{"name":"oMusic","path":"objects/oMusic/oMusic.yy",},},
     {"id":{"name":"snd_big_point","path":"sounds/snd_big_point/snd_big_point.yy",},},
-    {"id":{"name":"onPoint","path":"scripts/onPoint/onPoint.yy",},},
+    {"id":{"name":"player","path":"scripts/player/player.yy",},},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},},
     {"id":{"name":"oControl","path":"objects/oControl/oControl.yy",},},
     {"id":{"name":"snd_small_point","path":"sounds/snd_small_point/snd_small_point.yy",},},
