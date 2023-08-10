@@ -15,14 +15,13 @@ if(frequency/(img_num/2) == img_frame){
 	img_frame++
 }
 
-if((music_status == 1 || music_status == 3 || music_status == 0) && can_i_move){
 //在误差内
+if((status == 1 || status == 3 || status == 0) && can_i_move){
 	move();
 }
 
 //进入惩罚区
-if(music_status == 2){
-	show_debug_message(can_i_move)
+if(status == 2){
 	if(move_wait_round > 0 && first_time_in_publish){
 		move_wait_round --;
 	}else if(move_wait_round == 0){

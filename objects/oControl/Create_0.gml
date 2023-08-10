@@ -18,9 +18,7 @@ frame_per_beat = img_frame / img_beat_loop;
 //一帧有几毫秒
 ms_per_frame = ms_per_beat / frame_per_beat;
 //音乐所处的状态 0完美节拍 1前误差 2惩罚区域 3后误差
-music_status = 0
-//强弱拍 0是强拍
-states = 0;
+status = 0;
 //频率 3600是每分钟的帧数，不需要改变
 frequency = 3600/beat;
 //左误差 单位：帧
