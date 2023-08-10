@@ -15,9 +15,16 @@ if(frequency/(img_num/2) == img_frame){
 	img_frame++
 }
 
-//在误差内
+//在误差内 可移动
 if((status == 1 || status == 3 || status == 0) && can_i_move){
 	move();
+}else{
+//在误差内 不可移动
+	if(
+		up_pressed()||down_pressed()||left_pressed()||right_pressed()
+	){
+		instance_create_layer(x, y - 20, "Instances", oMiss)
+	}
 }
 
 //进入惩罚区

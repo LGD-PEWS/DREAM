@@ -28,6 +28,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"idle","folderPath":"folders/精灵/player/idle.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"脚本","folderPath":"folders/脚本.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"路径","folderPath":"folders/路径.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"player","folderPath":"folders/物体/player.yy",},
   ],
   "IncludedFiles": [],
   "isEcma": false,
@@ -45,7 +46,9 @@
     {"id":{"name":"player","path":"scripts/player/player.yy",},},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},},
     {"id":{"name":"oControl","path":"objects/oControl/oControl.yy",},},
+    {"id":{"name":"oMiss","path":"objects/oMiss/oMiss.yy",},},
     {"id":{"name":"snd_small_point","path":"sounds/snd_small_point/snd_small_point.yy",},},
+    {"id":{"name":"miss","path":"sprites/miss/miss.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
   ],
   "RoomOrderNodes": [

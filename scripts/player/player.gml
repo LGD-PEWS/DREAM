@@ -8,9 +8,21 @@ function can_move(){
 function cant_move(){
 	can_i_move = false;
 }
+function up_pressed(){
+	if(keyboard_check_pressed(vk_up)||keyboard_check_pressed(ord("W"))) return true;
+}
+function down_pressed(){
+	if(keyboard_check_pressed(vk_down)||keyboard_check_pressed(ord("S"))) return true;
+}
+function left_pressed(){
+	if(keyboard_check_pressed(vk_left)||keyboard_check_pressed(ord("A"))) return true;
+}
+function right_pressed(){
+	if(keyboard_check_pressed(vk_right)||keyboard_check_pressed(ord("D"))) return true;
+}
 //移动
 function move(){
-	if(keyboard_check_pressed(vk_down)||keyboard_check_pressed(ord("S"))){
+	if(down_pressed()){
 	//蓄力
 	states ++;
 	//切换动画
@@ -43,7 +55,7 @@ function move(){
 	cant_move();
 }
 
-if(keyboard_check_pressed(vk_left)||keyboard_check_pressed(ord("A"))){
+if(left_pressed()){
 	//切换动画
 	sprite_index = spr_player_idle;
 	//动画第一帧
@@ -56,7 +68,7 @@ if(keyboard_check_pressed(vk_left)||keyboard_check_pressed(ord("A"))){
 	cant_move();
 }
 
-if(keyboard_check_pressed(vk_right)||keyboard_check_pressed(ord("D"))){
+if(right_pressed()){
 	//切换动画
 	sprite_index = spr_player_idle;
 	//动画第一帧
@@ -73,16 +85,11 @@ if(keyboard_check_pressed(vk_right)||keyboard_check_pressed(ord("D"))){
 //惩罚，这回合不允许移动
 function punish(){
 	if(
-		keyboard_check_pressed(vk_up)||
-		keyboard_check_pressed(vk_down)||
-		keyboard_check_pressed(vk_left)||
-		keyboard_check_pressed(vk_right)||
-		keyboard_check_pressed(ord("W"))||
-		keyboard_check_pressed(ord("S"))||
-		keyboard_check_pressed(ord("A"))||
-		keyboard_check_pressed(ord("D"))
+		up_pressed()||down_pressed()||left_pressed()||right_pressed()
 	){
 		cant_move();
+		//instance_create_depth(x,y,10,oMiss);
+		instance_create_layer(x, y - 20, "Instances", oMiss)
 		move_wait_round = 2;
 	}
 }

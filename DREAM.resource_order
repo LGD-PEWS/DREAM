@@ -17,13 +17,15 @@
     {"name":"idle","order":1,"path":"folders/精灵/player/idle.yy",},
     {"name":"脚本","order":5,"path":"folders/脚本.yy",},
     {"name":"路径","order":4,"path":"folders/路径.yy",},
+    {"name":"player","order":4,"path":"folders/物体/player.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_player_down","order":2,"path":"sprites/spr_player_down/spr_player_down.yy",},
     {"name":"spr_player_idle","order":1,"path":"sprites/spr_player_idle/spr_player_idle.yy",},
     {"name":"oWall","order":2,"path":"objects/oWall/oWall.yy",},
     {"name":"snd_big_point","order":1,"path":"sounds/snd_big_point/snd_big_point.yy",},
-    {"name":"oPlayer","order":3,"path":"objects/oPlayer/oPlayer.yy",},
     {"name":"oControl","order":1,"path":"objects/oControl/oControl.yy",},
+    {"name":"oMiss","order":1,"path":"objects/oMiss/oMiss.yy",},
+    {"name":"miss","order":2,"path":"sprites/miss/miss.yy",},
   ],
 }

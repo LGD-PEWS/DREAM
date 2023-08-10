@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "物体",
-    "path": "folders/物体.yy",
+    "name": "player",
+    "path": "folders/物体/player.yy",
   },
   "parentObjectId": {
     "name": "oControl",
