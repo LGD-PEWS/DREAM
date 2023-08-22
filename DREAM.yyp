@@ -45,13 +45,17 @@
     {"id":{"name":"snd_big_point","path":"sounds/snd_big_point/snd_big_point.yy",},},
     {"id":{"name":"player","path":"scripts/player/player.yy",},},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},},
+    {"id":{"name":"rmInit","path":"rooms/rmInit/rmInit.yy",},},
     {"id":{"name":"oControl","path":"objects/oControl/oControl.yy",},},
     {"id":{"name":"oMiss","path":"objects/oMiss/oMiss.yy",},},
     {"id":{"name":"snd_small_point","path":"sounds/snd_small_point/snd_small_point.yy",},},
+    {"id":{"name":"oCarema","path":"objects/oCarema/oCarema.yy",},},
     {"id":{"name":"miss","path":"sprites/miss/miss.yy",},},
+    {"id":{"name":"snd_lobby_4_130","path":"sounds/snd_lobby_4_130/snd_lobby_4_130.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
   ],
   "RoomOrderNodes": [
+    {"roomId":{"name":"rmInit","path":"rooms/rmInit/rmInit.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
   ],
   "TextureGroups": [

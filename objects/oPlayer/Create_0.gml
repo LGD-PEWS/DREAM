@@ -6,15 +6,6 @@ event_inherited();
 
 image_speed = 0;
 
-//图片在第几帧
-img_status = 0;
-
-//动画循环共有几帧
-img_num = 6;
-
-//计时器
-img_frame = 1;
-
 //可以进行移动
 can_i_move = true;
 

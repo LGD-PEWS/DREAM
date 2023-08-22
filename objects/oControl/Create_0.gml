@@ -6,7 +6,7 @@ enum TIME{
 	MS = 60000,
 }
 //音乐是几拍的
-beat = 120;
+beat = 130;
 //图片帧
 img_frame = 60;
 //图片几拍一循环
@@ -19,8 +19,6 @@ frame_per_beat = img_frame / img_beat_loop;
 ms_per_frame = ms_per_beat / frame_per_beat;
 //音乐所处的状态 0完美节拍 1前误差 2惩罚区域 3后误差
 status = 0;
-//频率 3600是每分钟的帧数，不需要改变
-frequency = 3600/beat;
 //左误差 单位：帧
 left_deviation = 10;
 //右误差 单位：帧
@@ -32,11 +30,16 @@ frame_time = current_time;
 //这回合第一次进惩罚区
 first_time_in_publish = true;
 //
-//帧
-frame = 1;
-
-
-
+//图片在第几帧
+img_status = 0;
+//动画循环共有几帧
+img_num = 6;
+//一拍有几张图
+img_per_beat = img_num/img_beat_loop;
+//每张图有几帧
+frame_per_img = frame_per_beat/img_per_beat
+//图片大小循环
+img_circulate = true;
 
 
 

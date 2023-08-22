@@ -4,6 +4,8 @@
 // Inherit the parent event
 event_inherited();
 
+audio_play_sound(snd_lobby_4_130,0,false);
+
 //强弱拍 0是强拍
 music_status = 0;
 

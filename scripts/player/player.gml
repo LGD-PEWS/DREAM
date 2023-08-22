@@ -58,8 +58,8 @@ function move(){
 if(left_pressed()){
 	//切换动画
 	sprite_index = spr_player_idle;
-	//动画第一帧
-	//image_index = 0;
+	//动画方向
+	image_xscale = -1;
 	//蓄力清零
 	states = 0;
 	//移动位置
@@ -71,8 +71,8 @@ if(left_pressed()){
 if(right_pressed()){
 	//切换动画
 	sprite_index = spr_player_idle;
-	//动画第一帧
-	//image_index = 0; 
+	//动画方向
+	image_xscale = 1;
 	//蓄力清零
 	states = 0;
 	//移动位置
